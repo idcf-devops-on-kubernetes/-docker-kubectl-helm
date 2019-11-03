@@ -11,7 +11,10 @@ LABEL org.label-schema.version="v${VERSION}"
 # https://aur.archlinux.org/packages/kubectl-bin/
 ADD https://storage.googleapis.com/kubernetes-release/release/v${VERSION}/bin/linux/amd64/kubectl /usr/local/bin/kubectl
 ADD ./init-in-k8s.sh /var/init/init-in-k8s.sh
+RUN chmod +x /var/init/init-in-k8s.sh
+
 ADD ./startup.sh /var/init/startup.sh
+RUN chmod +x /var/init/startup.sh
 
 ENV HOME=/config
 
