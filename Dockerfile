@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM dockerhub.azk8s.cn/library/docker:dind
 
 ARG VERSION=1.16.0
 LABEL maintainer="jijie.chen@outlook.com"
@@ -15,7 +15,7 @@ ADD ./init-kubectl.sh ./var/init/init-kubectl.sh
 ENV HOME=/config
 
 RUN set -x && \
-    apk add --no-cache curl ca-certificates && \
+    apk add --no-cache bash curl ca-certificates && \
     chmod +x /usr/local/bin/kubectl && \
     \
     # Create non-root user (with a randomly chosen UID/GUI).
