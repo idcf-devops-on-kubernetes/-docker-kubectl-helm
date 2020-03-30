@@ -7,4 +7,4 @@
 2. Docker 也就是 Docker in Docker 模式的 Docker
 3. kubectl 当运行在 Kubernetes 环境中时，可自动根据 Kubernetes 提供的 Service Account 完成 ~/.kube/config 的配置
 
-目前，此镜像已发布在 [Docker Hub](https://hub.docker.com/r/jijiechen/kubectl) 上。
+目前，此镜像已发布在 [Docker Hub](https://hub.docker.com/r/jijiechen/docker-kubectl-helm) 上。
